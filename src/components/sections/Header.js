@@ -2,7 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 import { StaticQuery, graphql } from 'gatsby';
 import Img from 'gatsby-image';
-
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 import { Container } from '@components/global';
 import ExternalLink from '@common/ExternalLink';
 
@@ -24,28 +25,24 @@ const Header = () => (
     `}
     render={data => (
       <HeaderWrapper>
-        <Container>
-          <Grid>
-            <Art>
-              <Img fluid={data.art_build.childImageSharp.fluid} />
-            </Art>
-            <Text>
-              <h1>
-                Fast in
-                <br />
-                every way
-                <br />
-                that matters
-              </h1>
-              <br />
-              <p>
-                <StyledExternalLink href="https://github.com/ajayns/gatsby-absurd">
-                  Check out source &nbsp;&#x2794;
-                </StyledExternalLink>
-              </p>
-            </Text>
-          </Grid>
-        </Container>
+          <Carousel
+            autoplay
+            infiniteLoop
+            dynamicHeight
+            showThumbs={false}>
+              <div>
+                  <img src="https://loremflickr.com/640/360" />
+                  <p className="legend">Legend 1</p>
+              </div>
+              <div>
+                <img src="https://loremflickr.com/640/320" />
+                <p className="legend">Legend 2</p>
+              </div>
+              <div>
+              <img src="https://loremflickr.com/640/380" />
+                  <p className="legend">Legend 3</p>
+              </div>
+          </Carousel>
       </HeaderWrapper>
     )}
   />

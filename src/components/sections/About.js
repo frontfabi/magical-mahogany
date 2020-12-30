@@ -44,7 +44,7 @@ const About = () => (
       }
     `}
     render={data => (
-      <Section id="about">
+      <Section id="sobre">
         <Container>
           <Grid>
             <div>

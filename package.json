@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-absurd",
+  "name": "perifacode",
   "private": true,
   "description": "An absurd starter for Gatsby",
   "version": "0.1.0",
@@ -24,6 +24,7 @@
     "react-collapsible": "^2.6.0",
     "react-dom": "^16.6.3",
     "react-helmet": "^5.2.0",
+    "react-responsive-carousel": "^3.2.11",
     "react-scrollspy": "^3.3.5",
     "styled-components": "^4.1.3"
   },
